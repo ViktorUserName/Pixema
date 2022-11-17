@@ -9,6 +9,10 @@
   scroll-behavior: smooth; 
 }
 
+html, body {
+  background: #000000;
+}
+
 textarea{
   resize: none;
 }
