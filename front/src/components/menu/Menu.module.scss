@@ -1,8 +1,9 @@
 @import url(../../mixin.scss);
 .menu{
     max-width: 160px;
+    width: 158px;
     &Content {
-        max-width: 160px;
+        height: 100%;
     }
     &Options{
         padding-top: 60px;
@@ -35,6 +36,7 @@
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
+            width: 100%;
         }
     }
     &Rights {
@@ -43,9 +45,8 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
-        display: flex;
-        align-items: center;
         color: #AFB2B6;
         padding-top: 20px;
+        width: 158px;
     }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Search from '../search/Search';
 import User from '../user/User';
+import Card from './card/Card';
 import s from './GroupCard.module.scss'
 
 // const searchSvg = (
@@ -16,6 +17,16 @@ const GroupCard = () => {
             <div className={s.mainSearchandAva}>
                 <input placeholder="Search" className={s.mainInput}/>
                 <User/>
+            </div>
+            <div className={s.mainGroup}>
+                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
+                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
+                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
+                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
+                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
+                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
+                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
+                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
             </div>
         </div>
     );
