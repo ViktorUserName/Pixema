@@ -1,11 +1,12 @@
 import React from 'react';
+import s from './Search.module.scss'
 
-const search = () => {
+const Search = () => {
     return (
-        <div>
-            
+        <div className={s.search}>
+            <input placeholder="Enter Post Title"/>
         </div>
     );
 };
 
-export default search;
+export default Search;

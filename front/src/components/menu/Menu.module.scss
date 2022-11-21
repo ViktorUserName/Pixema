@@ -1,7 +1,51 @@
+@import url(../../mixin.scss);
 .menu{
+    max-width: 160px;
     &Content {
-        padding-top: 40px;
-        margin-top: 8px;
         max-width: 160px;
+    }
+    &Options{
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        & a {
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        color: #80858B;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 23px;
+        & > svg {
+            fill: #80858B;
+        }
+        &:hover{
+            color: #7B61FF;
+            & > svg {
+                fill: #7B61FF;
+            }
+        }
+        }
+        &Conteiner {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+    }
+    &Rights {
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        color: #AFB2B6;
+        padding-top: 20px;
     }
 }

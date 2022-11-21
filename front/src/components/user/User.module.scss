@@ -1,0 +1,24 @@
+.user {
+    max-height: 56px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    &Ava {
+        width: 56px;
+        height: 56px;
+        background-color: #7B61FF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &Name {
+        font-size: 16px;
+        padding: 0 58px 0 20px;
+    }
+}

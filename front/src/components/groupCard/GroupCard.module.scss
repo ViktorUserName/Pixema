@@ -1,0 +1,30 @@
+.main {
+    &SearchandAva {
+        // position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        width: 100%;
+        height: 100%;
+        // & > svg {
+        //     position: absolute;
+        //     right: 10px;
+        //     top: 10px;
+        // }
+    }
+    &Input {
+        width: 1184px;
+        height: 56px;
+        padding-left: 20px;
+        background: #323537;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #80858B;
+        // width: 100%;
+    }   
+}
