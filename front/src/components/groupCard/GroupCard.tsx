@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC, useState, useEffect} from 'react';
 import {Link, Route, Routes } from "react-router-dom";
 import User from '../user/User';
 import Card from './card/Card';
@@ -13,7 +13,21 @@ import UserBurger from '../user/UserBurger';
 // )
 
 
-const GroupCard = () => {
+const GroupCard: React.FC = () => {
+    const [data, setData] = useState<any[]>([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3001/movie')
+        .then((response) => {
+            if (response.ok){
+                return response.json()
+            }
+            throw new Error('Bad response')
+        })
+        .then((response) => setData(response))
+        .catch((error) => console.log(error))
+    }, [])
+
     return (
         <div className={s.main}>
             <div className={s.mainSearchandAva}>
@@ -23,14 +37,12 @@ const GroupCard = () => {
                 <UserBurger/>
             </div>
             <div className={s.mainGroup}>
-                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
-                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
-                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
-                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
-                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
-                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
-                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
-                <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
+                {
+                    data && data.map((data) => {
+                        return <Card key={data.key} id={data.id} title={data.title} age={data.age} img={data.img} genre={data.genre} />
+                    })
+                }
+                
             </div>
             <div className={s.mainButton}>
                 <button>Show more</button>

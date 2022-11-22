@@ -1,12 +1,17 @@
 import React from 'react';
 import s from './Card.module.scss'
 
+
+interface Igenre {
+    genre: string
+}
 interface Icard  {
     id: number,
     img: string,
     title: string,
     age: string,
     genre: string
+    // IgenreConfig: Igenre[]
 }
 
 const Card: React.FC<Icard> = ({
@@ -27,5 +32,6 @@ const Card: React.FC<Icard> = ({
         </div>
     );
 };
+
 
 export default Card;

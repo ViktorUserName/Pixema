@@ -9,6 +9,6 @@
     "mongoose": "^6.7.2"
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon ./service/index.js"
   }
 }
