@@ -8,8 +8,16 @@
     color: #FFFFFF;
     &Info {
         padding: 40px 0 4px 0;
+        @media (max-width:768px) {
+            padding: 24px 0 0 0;
+        }
     }
     &Genre {
         color: #AFB2B6;
+    }
+    @media (max-width:768px) {
+        & > img {
+            width: 175px;
+        }
     }
 }

@@ -1,8 +1,10 @@
 import React from 'react';
-import Search from '../search/Search';
+import {Link, Route, Routes } from "react-router-dom";
 import User from '../user/User';
 import Card from './card/Card';
+import logo from '../../assets/mainPage/pixema.svg'
 import s from './GroupCard.module.scss'
+import UserBurger from '../user/UserBurger';
 
 // const searchSvg = (
 //     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,8 +17,10 @@ const GroupCard = () => {
     return (
         <div className={s.main}>
             <div className={s.mainSearchandAva}>
+                <Link to='/' className={s.mainLogoTablet}><img src={logo} alt="" /></Link>
                 <input placeholder="Search" className={s.mainInput}/>
                 <User/>
+                <UserBurger/>
             </div>
             <div className={s.mainGroup}>
                 <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
@@ -27,6 +31,9 @@ const GroupCard = () => {
                 <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
                 <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
                 <Card id={1} title='first' img='https://i.ibb.co/MSxfdnt/info1.png' age='22' genre='adventure'/>
+            </div>
+            <div className={s.mainButton}>
+                <button>Show more</button>
             </div>
         </div>
     );

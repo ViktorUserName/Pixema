@@ -21,4 +21,28 @@
         font-size: 16px;
         padding: 0 58px 0 20px;
     }
+    @media (max-width:1010px){
+        display: none;
+    }
+}
+
+.burger {
+    width: 56px;
+    height: 56px;
+    background-color: #7B61FF;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+    & > span {
+        width: 14px;
+        height: 2px;
+        background: white;
+    }
+    @media (max-width:1010px) {
+        display: flex;
+    }
 }

@@ -51,9 +51,9 @@ const Menu: React.FC = () => {
                             <p>Settings</p>
                         </Link>
                     </div>
-                    <p className={s.menuRights}>
+                </div>
+                <div className={s.menuRights}>
                     © All Rights Reserved
-                    </p>
                 </div>
             </div>
         </div>

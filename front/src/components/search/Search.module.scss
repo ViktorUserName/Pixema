@@ -1,0 +1,43 @@
+.main {
+    &SearchandAva {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        width: 100%;
+        @media (max-width:768px) {
+            gap:0;
+        }
+    }
+    &Input {
+        // width: 1184px;
+        height: 56px;
+        padding-left: 20px;
+        background: #323537;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #80858B;
+        width: 100%;
+        @media (max-width:768px) {
+            width: 48%;
+            margin: 0 32px 0 78px;
+        }
+    }   
+    &LogoTablet {
+        display: none;
+        @media (max-width:1010px){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            & > img {
+                width: 162px!important;
+                height: 42px!important;
+            }
+        }
+    }
+
+}

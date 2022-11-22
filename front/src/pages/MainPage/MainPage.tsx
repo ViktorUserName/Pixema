@@ -1,6 +1,7 @@
 import React from 'react';
 import GroupCard from '../../components/groupCard/GroupCard';
 import Menu from '../../components/menu/Menu';
+import Search from '../../components/search/Search';
 import s from './MainPage.module.scss'
 
 const MainPage: React.FC = () => {
