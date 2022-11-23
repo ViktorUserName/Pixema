@@ -5,12 +5,14 @@ import Card from './card/Card';
 import logo from '../../assets/mainPage/pixema.svg'
 import s from './GroupCard.module.scss'
 import UserBurger from '../user/UserBurger';
+import Search from '../search/Search';
 
 
 
 const GroupCard: React.FC = () => {
     const [data, setData] = useState<any[]>([]);
-    const [query, setQuery] = useState<String>('')
+    const [query, setQuery] = useState<String>('');
+    
 
     useEffect(() => {
         fetch('http://localhost:3001/movie')
@@ -26,19 +28,18 @@ const GroupCard: React.FC = () => {
     
     return (
         <div className={s.main}>
-            <div className={s.mainSearchandAva}>
+            {/* <div className={s.mainSearchandAva}>
                 <Link to='/' className={s.mainLogoTablet}><img src={logo} alt="" /></Link>
                 <input placeholder="Search" className={s.mainInput}
                 onChange={ event => setQuery(event.target.value)}
                 />
                 <User/>
                 <UserBurger/>
-            </div>
+            </div> */}
+
+            <Search onChange={event => setQuery((event.target as HTMLInputElement).value)} />
             <div className={s.mainGroup}>
                 {
-                    // data && data.map((data) => {
-                    //     return <Card key={data.key} id={data.id} title={data.title} age={data.age} img={data.img} genre={data.genre.join(' · ')} />
-                    // })
                     data && data.filter((post) => {
                         if (query === ''){
                             return post
